@@ -22,7 +22,7 @@ This project bridges that gap by compiling Pisinger's C algorithms (such as `min
 
 Before installing, ensure you have the following dependencies:
 
-* **Python 3.13+**
+* **Python >=3.12+**
 * **C++ Compiler:** (GCC, Clang, or MSVC) supporting C++11 or later.
 * **DIGNEApy:** (Ensure this package provides the `Knapsack` and `Solution` classes).
 

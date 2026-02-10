@@ -14,7 +14,7 @@ version = "0.1.0"
 description = "Pisinger solvers for KP in Python"
 authors = [{ name = "Alejandro Marrero", email = "amarrerd@ull.edu.es" }]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 classifiers = [
     'Development Status :: 5 - Production/Stable',
     "Intended Audience :: Science/Research",
@@ -25,6 +25,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
+
     'Topic :: Scientific/Engineering',
     'Typing :: Typed',
     'Operating System :: Unix',
@@ -33,11 +34,7 @@ classifiers = [
 dependencies = ["numpy>=2.4.2", "pybind11>=3.0.1"]
 
 [dependency-groups]
-dev = [
-    "pybind11>=3.0.1",
-    "pytest>=9.0.2",
-    "pytest-cov>=7.0.0",
-]
+dev = ["pybind11>=3.0.1", "pytest>=9.0.2", "pytest-cov>=7.0.0"]
 
 [tool.uv.extra-build-dependencies]
 pisingerpy = ["pybind11"]
