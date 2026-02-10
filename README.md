@@ -1,6 +1,8 @@
 
 # Pisinger KP Solvers for Python
 
+[![Build](https://github.com/amarrerod/pisingerpy/actions/workflows/python-app.yml/badge.svg)](https://github.com/amarrerod/pisingerpy/actions/workflows/python-app.yml)
+
 A high-performance Python interface for David Pisinger’s renowned Knapsack Problem (KP) solvers. This package leverages **pybind11** to wrap the original C implementations, providing Python developers with efficient, low-level solver access while adhering to the `DIGNEApy` interfaces.
 
 ## 🚀 Overview
@@ -52,8 +54,7 @@ Here is a complete example of how to define a Knapsack problem using `DIGNEApy` 
 
 ```python
 import numpy as np
-from digneapy.interfaces import Knapsack
-from pisinger_kp import minknap  # Importing a specific solver
+from pisinger_kp import minknap, Knapsack, Solution
 
 # 1. Define your problem data
 profit = np.array([10, 10, 12, 18], dtype=np.int32)
@@ -69,7 +70,7 @@ instance = Knapsack(profit, weights, capacity)
 solution = minknap(instance)
 
 # 4. Process results
-print(f"Optimal Objective Value: {solution.value}")
+print(f"Optimal Objective Value: {solution.objectives}")
 
 ```
 
